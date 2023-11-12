@@ -16,6 +16,7 @@
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
+    "noImplicitAny": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
@@ -32,5 +33,5 @@
     "target": "ESNext"
   },
   "exclude": [".next", "node_modules"],
-  "include": [".next/types/**/*.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": [".next/types/**/*.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "app/components/QuizCard.tsx", "app/components/PopularQuiz.tsx"]
 }

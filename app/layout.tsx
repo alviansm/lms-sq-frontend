@@ -5,6 +5,10 @@ import "./globals.css";
 const RootLayout: FC<PropsWithChildren> = function ({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Simple Quiz</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body>
         <FlowbiteContext>{children}</FlowbiteContext>
       </body>

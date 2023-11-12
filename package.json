@@ -1,13 +1,11 @@
 {
-  "name": "flowbite-next-starter",
-  "version": "0.0.0",
-  "homepage": "https://github.com/tulupinc/flowbite-next-starter",
-  "bugs": "https://github.com/tulupinc/flowbite-next-starter/issues",
+  "name": "frontend-exgem-lms",
+  "version": "0.1.0",
   "license": "MIT",
-  "author": "Conner Davis <conner@tulup.io>",
+  "author": "Alvians Maulana https://fourleaves.site",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tulupinc/flowbite-next-starter.git"
+    "url": ""
   },
   "scripts": {
     "build": "next build",
@@ -22,11 +20,14 @@
     "next": "^13.0.6",
     "react": "18",
     "react-dom": "18",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "react-latex-next": "^2.2.0",
+    "react-quill": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.12",
     "@types/react": "18",
+    "@types/react-draft-wysiwyg": "^1.13.6",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "autoprefixer": "10.4.13",
