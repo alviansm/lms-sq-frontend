@@ -7,34 +7,33 @@ const TableHeaderEditQuiz = () => {
         <>
             <Table.HeadCell>
                     #
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Course or Quiz Name
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Description
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Organizer
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Time
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Cooldown
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Number of Quesions
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Difficulty
-                </Table.HeadCell>
-                <Table.HeadCell>
-                    Token
-                </Table.HeadCell>
-                <Table.HeadCell>
-                <span className="sr-only">Edit</span>
-                <span className="sr-only">Report</span>
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Judul
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Deskripsi
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Pengorganisir
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Waktu
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Jeda
+            </Table.HeadCell>
+            <Table.HeadCell>
+                ΣPertanyaan
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Kesulitan
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Token
+            </Table.HeadCell>
+            <Table.HeadCell>
+                Actions
             </Table.HeadCell>
         </>
     )

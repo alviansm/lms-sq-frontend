@@ -1,14 +1,15 @@
 'use client';
 
-import DefaultFooter from "../../components/DefaultFooter";
-import DefaultNavbar from "../../components/DefaultNavbar";
-import TableEditQuizList from "../../components/TableEditQuizList";
+import DefaultFooter from "../components/DefaultFooter";
+import DefaultNavbar from "../components/DefaultNavbar";
+import TableEditQuizList from "../components/TableEditQuizList";
 
+import Link from "next/link";
 import { Button } from 'flowbite-react';
 import { MdQuiz } from 'react-icons/md';
 import { FaUniversity } from 'react-icons/fa';
 
-const CreateQuiz = () => {
+const CreateContent = () => {
     return (
         <div>
             {/* Navbar */}
@@ -29,10 +30,12 @@ const CreateQuiz = () => {
                             </p>
                         </div>
                         <div className="flex flex-wrap gap-2">
-                        <Button>
-                            <MdQuiz className="mr-2 h-5 w-5" />
-                            Buat Kuis
-                        </Button>
+                        <Link href="/add/quiz">
+                            <Button>
+                                <MdQuiz className="mr-2 h-5 w-5" />
+                                Buat Kuis
+                            </Button>
+                        </Link>
                         <Button>
                             <FaUniversity className="mr-2 h-5 w-5" />
                             Buat Kelas
@@ -61,4 +64,4 @@ const CreateQuiz = () => {
     )
 }
 
-export default CreateQuiz;
+export default CreateContent;

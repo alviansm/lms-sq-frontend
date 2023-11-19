@@ -28,7 +28,7 @@ const CreateQuizButton = () => {
         <Dropdown.Item>Keluar Akun</Dropdown.Item>
       </Dropdown>
 
-      <Link href={"/quiz/create"}>
+      <Link href={"/add"}>
         <Button outline>Buat Soal</Button>
       </Link>
       <Navbar.Toggle />
