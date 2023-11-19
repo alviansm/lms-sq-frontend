@@ -12,7 +12,6 @@ import { AiFillEdit } from "react-icons/ai";
 import { FaSave } from "react-icons/fa";
 import { MdDescription } from "react-icons/md";
 
-import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 
 const modules = {
