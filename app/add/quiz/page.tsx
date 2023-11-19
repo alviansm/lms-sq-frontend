@@ -5,14 +5,12 @@ import DefaultFooter from '../../components/DefaultFooter';
 import TableEditQuestions from '../../components/TableEditQuestions';
 
 import React from 'react';
-import { Button, Label, TextInput } from 'flowbite-react';
+import { Button, TextInput } from 'flowbite-react';
 import { IoIosAddCircle } from "react-icons/io";
 import { FaTrashAlt } from "react-icons/fa";
 import { AiFillEdit } from "react-icons/ai";
 import { FaSave } from "react-icons/fa";
 import { MdDescription } from "react-icons/md";
-
-import ReactQuill from "react-quill";
 
 const modules = {
     toolbar: [
@@ -39,32 +37,6 @@ type quizData = {
     difficulty: string,
     token: string,    
 };
-
-const QuillPopup = () => {
-    const [ReactQuillText, setReactQuillText] = React.useState("");
-    const [title, setTitle] = React.useState("");
-
-    return (
-        <div>
-            <form>
-                <input
-                    className="w-full border-2 mb-2 pt-2 mt-8"
-                    type="text"
-                    placeholder="Title"
-                    value={title}
-                    onChange={e => setTitle(e.target.value)}
-                />
-                <ReactQuill 
-                    value={ReactQuillText} onChange={(value) => setReactQuillText(value)}
-                    theme="snow"
-                    className="w-full m-auto shadow-xl"
-                    modules={modules}
-                />
-            </form>
-
-        </div>  
-    )
-}
 
 const CreateQuiz = () => {
     const [showEditTitle, setShowEditTitle] = React.useState(false);
