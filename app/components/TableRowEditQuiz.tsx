@@ -1,6 +1,9 @@
 'use client';
 
 import { Table } from 'flowbite-react';
+import { IconButton, Box, Tooltip } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const TableRowEditQuiz = () => {
     return (
@@ -34,12 +37,18 @@ const TableRowEditQuiz = () => {
                         ABCDE
                     </Table.Cell>
                     <Table.Cell>
-                        <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                        Edit
-                        </a>
-                        <a href="#" className="font-medium text-cyan-600 hover:underline dark:text-cyan-500">
-                        Report
-                        </a>
+                            <Box sx={{ display: 'flex', gap: '1rem' }}>
+                                <Tooltip title="Edit">
+                                <IconButton onClick={() => (console.log("clicked"))}>
+                                    <EditIcon />
+                                </IconButton>
+                                </Tooltip>
+                                <Tooltip title="Delete">
+                                <IconButton color="error" onClick={() => console.log("clicked")}>
+                                    <DeleteIcon />
+                                </IconButton>
+                                </Tooltip>
+                            </Box>  
                     </Table.Cell>
                 </Table.Row>     
         </>

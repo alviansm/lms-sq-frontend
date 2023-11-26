@@ -12,6 +12,10 @@ import { AiFillEdit } from "react-icons/ai";
 import { FaSave } from "react-icons/fa";
 import { MdDescription } from "react-icons/md";
 
+// modal elements
+import { Checkbox, Label, Modal } from 'flowbite-react';
+import { useState } from 'react';
+
 const modules = {
     toolbar: [
         ["bold", "italic"],
@@ -49,6 +53,12 @@ const CreateQuiz = () => {
     const [questionNum, setQuestionNum] = React.useState("");
     const [difficulty, setDifficulty] = React.useState("");
     const [token, setToken] = React.useState("");    
+
+    const [openModal, setOpenModal] = useState(false);
+
+    const onCloseModal = () => {
+        setOpenModal(false);
+    }
 
     return (
         <div>
@@ -90,15 +100,72 @@ const CreateQuiz = () => {
                         }                           
                     </div>
                     <div className="flex flex-wrap gap-2">
-                    <Button className='p-2'>
-                        <IoIosAddCircle size={16} />
-                    </Button>
-                    <Button className='p-2'>
-                        <MdDescription size={16} />
-                    </Button>
-                    <Button className="p-2" color="failure">
-                        <FaTrashAlt size={16} />
-                    </Button>
+                        <Button className='p-2'>
+                            <IoIosAddCircle size={16} />
+                        </Button>
+                        <Button className='p-2' onClick={() => setOpenModal(true)}>
+                            <MdDescription size={16} />
+                        </Button>
+                        <Button className="p-2" color="failure">
+                            <FaTrashAlt size={16} />
+                        </Button>
+
+                        {/* Modal for editing quiz properties */}
+                        <Modal show={openModal} size="xl" onClose={onCloseModal} popup>
+                            <Modal.Header />
+                            <Modal.Body>
+                            <div className="space-y-6">
+                                <h3 className="text-xl font-medium text-gray-900 dark:text-white">{title}</h3>
+                                <div>
+                                    <div className="mb-2 block">
+                                        <Label htmlFor="description" value="Description" />
+                                    </div>
+                                    <TextInput
+                                        id="description"
+                                        placeholder="lorem ipsum dolor"
+                                        value={description}
+                                        onChange={(event) => setDescription(event.target.value)}
+                                        required
+                                    />
+                                </div>   
+                                <div>
+                                    <div className="mb-2 block">
+                                        <Label htmlFor="description" value="Description" />
+                                    </div>
+                                    <TextInput
+                                        id="description"
+                                        placeholder="lorem ipsum dolor"
+                                        value={description}
+                                        onChange={(event) => setDescription(event.target.value)}
+                                        required
+                                    />
+                                </div>   
+                                <div>
+                                    <div className="mb-2 block">
+                                        <Label htmlFor="description" value="Description" />
+                                    </div>
+                                    <TextInput
+                                        id="description"
+                                        placeholder="lorem ipsum dolor"
+                                        value={description}
+                                        onChange={(event) => setDescription(event.target.value)}
+                                        required
+                                    />
+                                </div>                                
+                                <div className="w-full">
+                                    <Button>
+                                        <FaSave className="h-5 w-5"/>
+                                    </Button>
+                                </div>
+                                <div className="flex justify-between text-sm font-medium text-gray-500 dark:text-gray-300">
+                                    Butuh bantuan?&nbsp;
+                                    <a href="#" className="text-cyan-700 hover:underline dark:text-cyan-500">
+                                        Baca manual kami
+                                    </a>
+                                </div>
+                            </div>
+                            </Modal.Body>
+                        </Modal>
                     </div>
                 </div>
                 
