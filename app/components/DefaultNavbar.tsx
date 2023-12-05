@@ -3,9 +3,19 @@
 import { Avatar, Dropdown, Button, Navbar, Spinner } from 'flowbite-react';
 import Link from 'next/link';
 import React from 'react';
+import { TbMathFunction } from 'react-icons/tb';
+import type { CustomFlowbiteTheme } from 'flowbite-react';
 
 type activePageProps = {
   activePage: string;
+};
+
+const customTheme: CustomFlowbiteTheme = {
+  dropwdown: {
+    color: {
+      primary: 'text-blue-700 hover:text-slate-900',
+    },
+  },
 };
 
 const CreateQuizButton = () => {
@@ -103,6 +113,7 @@ export default function DefaultNavbar(props: activePageProps) {
         <Navbar.Link
           href="/"
           active={props.activePage == 'home' ? true : false}
+          disabled={props.activePage == 'home' ? true : false}
         >
           <span
             className={
@@ -121,13 +132,20 @@ export default function DefaultNavbar(props: activePageProps) {
             Latihanku
           </span>
         </Navbar.Link>
-        <Navbar.Link
-          href="/explore"
-          active={props.activePage == 'explore' ? true : false}
-        >
-          <span className="text-lg text-blue-700 hover:text-slate-900">
-            Temukan
-          </span>
+        <Navbar.Link className="text-lg" style={{ color: '#1d4ed8' }}>
+          <Dropdown
+            label="Eksplor"
+            size="lg"
+            className="text-blue-700 hover:text-slate-900"
+            inline
+          >
+            <Dropdown.Item icon={TbMathFunction}>Matematika</Dropdown.Item>
+            <Dropdown.Item icon={TbMathFunction}>Kimia</Dropdown.Item>
+            <Dropdown.Item icon={TbMathFunction}>Fisika</Dropdown.Item>
+            <Dropdown.Item icon={TbMathFunction}>Teknik</Dropdown.Item>
+            <Dropdown.Item icon={TbMathFunction}>Sosiologi</Dropdown.Item>
+            <Dropdown.Item icon={TbMathFunction}>Umum</Dropdown.Item>
+          </Dropdown>
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
