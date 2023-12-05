@@ -4,7 +4,7 @@ import { Footer } from 'flowbite-react';
 
 export default function DefaultFooter() {
   return (
-    <Footer container className='mb-0 pb-4 bottom-0 left-0'>
+    <Footer container className='mb-0 pb-4 bottom-0 left-0 -z-50'>
       <Footer.Copyright
         by="SimpleQuiz™"
         href="/"

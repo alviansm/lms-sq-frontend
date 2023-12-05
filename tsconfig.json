@@ -26,6 +26,10 @@
         "name": "next"
       }
     ],
+    "paths": {
+      "@/*": ["./src/*"],
+      // "@/*: ["./*"] <<< if not using the src/ directory
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,

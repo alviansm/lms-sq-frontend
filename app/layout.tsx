@@ -7,7 +7,6 @@ const RootLayout: FC<PropsWithChildren> = function ({ children }) {
     <html lang="en">
       <head>
         <title>Simple Quiz</title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
         <FlowbiteContext>{children}</FlowbiteContext>
